@@ -8,19 +8,25 @@ import { RecrutadoresComponent } from './recrutadores/recrutadores.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './nav/nav.component';
+import { TituloComponent } from './titulo/titulo.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [					
+  declarations: [						
     AppComponent,
       ClientesComponent,
       RecrutadoresComponent,
       PerfilComponent,
       DashboardComponent,
-      NavComponent
+      NavComponent,
+      TituloComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BsDropdownModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

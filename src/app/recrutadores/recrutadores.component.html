@@ -1,6 +1,22 @@
-<h1>
-    {{titulo}}
-<ul>
- <li *ngFor="let recrutador of recrutadores">{{recrutador.nome}}</li>
-</ul>
-</h1>
+<div class="container">
+  <app-titulo [titulo]="titulo"></app-titulo>
+
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let recrutador of recrutadores">
+        <th scope="row">{{ recrutador.id }}</th>
+        <td>{{ recrutador.nome }}</td>
+        <td>{{ recrutador.sobrenome }}</td>
+        <td>{{ recrutador.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
